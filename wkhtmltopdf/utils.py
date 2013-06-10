@@ -13,6 +13,8 @@ from django.conf import settings
 
 from .subprocess import check_output
 
+sys.stderr = sys.__stderr__
+
 
 def _options_to_args(**options):
     """Converts ``options`` into a list of command-line arguments."""
